@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 // const mongoDBConnectionString = "mongodb+srv://dbUser:$Admin12009$@cluster0.roaquzy.mongodb.net/test";
-const mongoDBConnectionString = "mongodb+srv://dbUser:$Admin12009$@cluster0.roaquzy.mongodb.net/merndb?retryWrites=true&w=majority";
+const mongoDBConnectionString = process.env.MONGODB_CONNECTION_STRING;
 const mongoose = require("mongoose");
 mongoose.connect(mongoDBConnectionString);
 
