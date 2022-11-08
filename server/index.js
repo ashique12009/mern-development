@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const UserModel = require("./models/users");
+const cors = require("cors");
+
 app.use(express.json());
+app.use(cors());
 
 // const mongoDBConnectionString = "mongodb+srv://dbUser:$Admin12009$@cluster0.roaquzy.mongodb.net/test";
 const mongoDBConnectionString = "mongodb+srv://dbUser:$Admin12009$@cluster0.roaquzy.mongodb.net/merndb?retryWrites=true&w=majority";
